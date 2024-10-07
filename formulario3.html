@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="formu2.css">
+</head>
+<body>
+    <h2>Login</h2>
+    <form >
+    <div >
+   
+            <label for="username">Usuario:</label>
+            <br>
+            <br>
+            <input class="uno" type="text" id="username" name="username" required>
+            <br>
+            <br>
+            <label for="password">Contraseña:</label>
+            <br> <br>
+            <input class="uno" type="password" id="password" name="password" required>
+            <br>
+            <br>
+            <button type="submit">Enviar</button>
+        </div>
+</form>
+<br> <br> <br> <br><br>
+
+<h2>Formulario de Pasaje</h2>
+<form action="/submit-pasaje" method="POST">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br><br>
+    <label for="clase">Clase de Pasaje:</label>
+    <select id="clase" name="clase" required>
+        <option value="0">VIP</option>
+        <option value="1">Especial</option>
+        <option value="2">Primera</option>
+        <option value="3">Segunda</option>
+    </select>
+    <br><br>
+
+   
+    <button type="submit">Enviar</button>
+</form>
+<br><br><br><br>
+
+<h2>Proceso de Compra</h2>
+<form >
+   
+    <label for="articulo">Nombre del Artículo:</label>
+    <input type="text" id="articulo" name="articulo" required>
+    <br><br>
+
+    
+    <label for="metodo-entrega">Método de Entrega:</label>
+    <select id="metodo-entrega" name="metodo-entrega" required>
+        <option value="recogida">Recogida en Tienda</option>
+        <option value="envio">Envío a Domicilio</option>
+    </select>
+    <br><br>
+
+   
+    <button type="submit">Realizar Compra</button>
+</form>
+<br><br><br><br>
+<h2>Formulario de Compra</h2>
+<form action="/submit-compra" method="GET">
+ 
+    <label for="articulo"> Artículo:</label>
+    <input type="text" id="articulo" name="articulo" required>
+    <br><br>
+
+    
+    <label for="entrega">Método de Entrega:</label>
+    <br>
+    <input type="radio" id="recogida" name="entrega" value="recogida" required>
+    <label for="recogida">Recogida en Tienda</label>
+    <br>
+    <input type="radio" id="envio" name="entrega" value="envio" required>
+    <label for="envio">Envío a Domicilio</label>
+    <br><br>
+
+   
+    <button type="submit">Realizar Compra</button>
+</form>
+
+<br><br><br><br>
+<h2>Registro Escolar</h2>
+    <form >
+      
+        <label for="matricula">Número de Matrícula:</label>
+        <input type="text" id="matricula" name="matricula" pattern="M\d{3}" title="El número de matrícula debe empezar con 'M' seguido de tres dígitos (por ejemplo, M001)." required>
+        <br><br>
+
+      
+        <label for="materias">Selecciona las Materias:</label>
+        <br>
+        <input type="checkbox" id="matematicas" name="materias" value="Matemáticas">
+        <label for="matematicas">Matemáticas</label>
+        <br>
+        <input type="checkbox" id="algoritmia" name="materias" value="Algoritmia">
+        <label for="algoritmia">Algoritmia</label>
+        <br>
+        <input type="checkbox" id="sistemas" name="materias" value="Sistemas">
+        <label for="sistemas">Sistemas</label>
+        <br>
+        <input type="checkbox" id="robotica" name="materias" value="Robótica">
+        <label for="robotica">Robótica</label>
+        <br><br>
+
+        
+        <button type="submit">Registrarse</button>
+    </form>
+<br><br><br><br>
+
+
+
+<h2>Formulario de Contacto</h2>
+<form action="/submit-contact" method="POST">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder=" Nombre" required>
+    <br><br>
+
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Mail válido" required>
+    <br><br>
+
+    <label for="mensaje">Mensaje:</label>
+    <br>
+    <textarea id="mensaje" name="mensaje" cols="40" rows="10" required></textarea>
+    <br><br>
+    <input type="hidden" name="origen" value="página de contacto">
+
+    <button type="submit">Enviar</button>
+</form>
+<br><br><br><br>
+<h2>Formulario de Reserva</h2>
+<form action="/submit-reserva" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+    <br><br>
+
+    
+    <label for="num-personas">Número de Personas:</label>
+    <input type="number" id="num-personas" name="num-personas" min="1" required>
+    <br><br>
+
+  
+    <label for="fecha-inicio">Fecha de Inicio:</label>
+    <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+    <br><br>
+    <label for="fecha-fin">Fecha de Finalización:</label>
+    <input type="date" id="fecha-fin" name="fecha-fin" required>
+    <br><br>
+    <button type="submit">Reservar</button>
+</form>
+<br><br><br><br>
+
+<h2>Registro de Usuario</h2>
+<form action="/submit-registro" method="POST">
+    
+    <label for="alias">Alias:</label>
+    <input type="text" id="alias" name="alias" placeholder="Escribe tu alias" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Escribe tu email" required>
+    <br><br>
+
+    
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono" required>
+    <br><br>
+
+    <input type="hidden" name="tipo-usuario" value="usuario-nuevo">
+
+  
+    <button type="submit">Enviar</button>
+    <button type="reset">Restablecer</button>
+</form>
+<br><br><br><br>
+
+<h2>Pedido de Frutas</h2>
+<form action="/submit-pedido" method="GET">
+
+    <label for="fruta">Selecciona la fruta:</label>
+    <select id="fruta" name="fruta" required>
+        <option value="manzanas">Manzanas</option>
+        <option value="naranjas">Naranjas</option>
+        <option value="mandarinas">Mandarinas</option>
+    </select>
+    <br><br>
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="text" id="cantidad" name="cantidad" placeholder="Ejemplo: 1 ud, 2 kg, 100 gr" pattern="^\d+\s(ud|kg|gr)$" required>
+    <br><br>
+    <button type="submit">Realizar Pedido</button>
+    <br><br><br><br>
+    <h2>Compra de Botellas de Vino</h2>
+    <form action="/submit-compra" method="GET">
+        <label for="num-botellas">Número de Botellas (lostes de 3):</label>
+        <br>
+        <input type="number" id="num-botellas" name="num-botellas" min="3" step="3" required>
+        <br><br>
+        
+        <button type="submit">Comprar</button>
+    </form>
+<br><br><br><br>
+
+<h2>Registro como Programador</h2>
+<form action="/submit-registro" method="POST">
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+    <br><br>
+
+    <label for="ciudad">Ciudad (opcional):</label>
+    <input type="text" id="ciudad" name="ciudad" placeholder="Escribe tu ciudad">
+    <br><br>
+
+    <label for="telefono">Teléfono (opcional):</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono">
+    <br><br>
+
+    <fieldset class="hola">
+        <legend>Lenguajes de Programación Conocidos:</legend>
+        <input type="checkbox" id="javascript" name="lenguajes" value="javascript">
+        <label for="javascript">JavaScript</label>
+        <br>
+        <input type="checkbox" id="php" name="lenguajes" value="php">
+        <label for="php">PHP</label>
+        <br>
+        <input type="checkbox" id="python" name="lenguajes" value="python">
+        <label for="python">Python</label>
+        <br>
+        <input type="checkbox" id="nodejs" name="lenguajes" value="nodejs">
+        <label for="nodejs">Node.js</label>
+    </fieldset>
+    <br>
+
+    <label for="nivel-ingles">Nivel de Inglés:</label>
+    <select id="nivel-ingles" name="nivel-ingles" required>
+        <option value="">Selecciona tu nivel</option>
+        <option value="bajo">Bajo</option>
+        <option value="medio">Medio</option>
+        <option value="alto">Alto</option>
+    </select>
+    <br><br>
+    <button type="submit">Registrarse</button>
+</form>
+</body>
+</html>
